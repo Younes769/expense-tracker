@@ -1,13 +1,164 @@
 body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.expense-tracker {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.summary-item {
+  text-align: center;
+  flex: 1;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.summary-item.expenses {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.summary-item.income {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.summary-item.balance {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.summary-item h2 {
+  margin: 0 0 10px;
+}
+
+.summary-item p {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f8f9fa;
+  color: #333333;
+}
+
+td {
+  color: #666666;
+}
+
+.amount-income {
+  color: #28a745;
+}
+
+.amount-expense {
+  color: #dc3545;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+/* General Styling for Form Container */
+.transaction-form {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+/* Form Heading */
+.transaction-form h2 {
+  margin-bottom: 20px;
+  color: #333333;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+/* Form Layout */
+.transaction-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Labels */
+.transaction-form label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555555;
+}
+
+/* Form Inputs and Selects */
+.transaction-form input, 
+.transaction-form select {
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Styling for Buttons */
+.transaction-form button {
+  padding: 12px;
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.transaction-form button:hover {
+  background-color: #218838;
+}
+
+.transaction-form button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5);
+}
+
+@media (max-width: 600px) {
+  .summary {
+    flex-direction: column;
+  }
 }
